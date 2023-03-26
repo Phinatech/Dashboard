@@ -52,27 +52,23 @@ const DashBoard = () => {
     setHome(true);
   }; // menu bar
 
-
-
   return (
     <Container>
       <MenuBar width={menu ? "" : "value"}>
-
         <MenuWrapper>
-        <Menu onClick={menuSidebar}>
+          <Menu onClick={menuSidebar}>
             <AiOutlineMenu />
           </Menu>
-        <NavLink to="/">
-          <Logo src={logo} />
-        </NavLink>
-          
-
+          <NavLink to="/">
+            <Logo src={logo} />
+          </NavLink>
         </MenuWrapper>
 
         <Link
-         style={{ textDecoration: "none" }}
+          style={{ textDecoration: "none" }}
           to={"/dashboardhome"}
-           onClick={homeRoute}>
+          onClick={homeRoute}
+        >
           <SideBarProps
             paddingleft={home ? "" : "value"}
             bg={home ? "" : "value"}
@@ -113,9 +109,9 @@ const DashBoard = () => {
             icon={<IoRocketOutline />}
           />
         </Link>
-        {/* <Link
+        <Link
           style={{ textDecoration: "none" }}
-          to={"/account"}
+          to={"/Transaction"}
           onClick={accountRoute}
         >
           <SideBarProps
@@ -124,20 +120,20 @@ const DashBoard = () => {
             color={account ? "" : "value"}
             displayIcon="value"
             padding={account ? "" : "value"}
-            text="account"
+            text="transaction"
             icon={<RxPerson />}
           />
-        </Link> */}
-        
+        </Link>
+
         <Link
           style={{ textDecoration: "none" }}
           to={"/"}
           onClick={accountRoute}
         >
           <LogoOut
-            // onClick={() => {
-            //   dispatch(logout());
-            // }}
+          // onClick={() => {
+          //   dispatch(logout());
+          // }}
           >
             <Icon>
               <AiOutlineLogout />
@@ -147,7 +143,7 @@ const DashBoard = () => {
         </Link>
       </MenuBar>
       <ManinDasboard>
-        <Dashboard/>
+        <Dashboard />
       </ManinDasboard>
     </Container>
   );
@@ -215,7 +211,7 @@ const MenuBar = styled.div<{ width: string }>`
   height: 100vh;
   flex-direction: column;
   display: flex;
-  background-color: #031E3B;
+  background-color: #031e3b;
   /* background-color: red;   */
   transition: all 500ms;
 `;

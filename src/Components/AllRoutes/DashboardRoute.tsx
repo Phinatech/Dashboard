@@ -1,56 +1,56 @@
-import React from 'react'
-import { useRoutes } from 'react-router-dom'
-import Account from '../DashBoard/Acount/Account'
-import HomeDashBoard from '../DashBoard/Home/HomeDashBoard'
-import Investify from '../DashBoard/Investify/Investify'
-import Flex from '../DashBoard/Savings/Flex'
-import Piggybank from '../DashBoard/Savings/Piggybank'
-import SavingsDashboard from '../DashBoard/Savings/SavingsDashBoard'
-import Target from '../DashBoard/Savings/Target'
-import SaveLock from "../DashBoard/Savings/SaveLock"
+import React from "react";
+import { useRoutes } from "react-router-dom";
+import Transaction from "../DashBoard/Transaction/Transaction";
+import HomeDashBoard from "../DashBoard/Home/HomeDashBoard";
+import Investify from "../DashBoard/Investify/Investify";
+import Flex from "../DashBoard/Savings/Flex";
+import Piggybank from "../DashBoard/Savings/Piggybank";
+import SavingsDashboard from "../DashBoard/Savings/SavingsDashBoard";
+import Target from "../DashBoard/Savings/Target";
+import SaveLock from "../DashBoard/Savings/SaveLock";
 
 const Dashboard = () => {
-
   const element = useRoutes([
     {
-      path:"/dashboardhome",
-      element:<HomeDashBoard/>
-    },{
-      path:"/account",
-      element:<Account/>,
+      path: "/dashboardhome",
+      element: <HomeDashBoard />,
     },
     {
-      path:"/invest",
-      element:<Investify/>
+      path: "/transaction",
+      element: <Transaction />,
     },
     {
-      path:"/savings",
-      children:[
+      path: "/invest",
+      element: <Investify />,
+    },
+    {
+      path: "/savings",
+      children: [
         {
-          index:true,
-          element:<SavingsDashboard/>
+          index: true,
+          element: <SavingsDashboard />,
         },
         {
-          path:"/savings/piggybank",
-          element:<Piggybank/>
+          path: "/savings/piggybank",
+          element: <Piggybank />,
         },
         {
-          path:"/savings/flex",
-          element:<Flex/>
+          path: "/savings/flex",
+          element: <Flex />,
         },
         {
-          path:"/savings/target",
-          element:<Target/>
+          path: "/savings/target",
+          element: <Target />,
         },
         {
-          path:"/savings/safelock",
-          element:<SaveLock/>
-        }
-      ]
-    }
-  ])
+          path: "/savings/safelock",
+          element: <SaveLock />,
+        },
+      ],
+    },
+  ]);
 
-  return element
-}
+  return element;
+};
 
-export default Dashboard
+export default Dashboard;
