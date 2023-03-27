@@ -3,7 +3,7 @@ import React from "react";
 import styled from "styled-components";
 import Cards from "../Card/Cards";
 import Todo from "../Todo/Todo";
-import History from "../History/History";
+import Transaction from "../Transaction/Transaction";
 
 const HomeDashBoard = () => {
   // const user = useAppSelector((state) => state.currentUser);
@@ -35,7 +35,7 @@ const HomeDashBoard = () => {
           </Right>
         </Top>
         <Cards />
-        <History />
+        <Transaction />
       </Wrapper>
     </Container>
   );
