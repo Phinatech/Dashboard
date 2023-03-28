@@ -1,16 +1,15 @@
-import React from 'react'
-import All from "./Components/AllRoutes/Allroutes"
-import Dash from "./Components/AllRoutes/DashboardRoute"
-import DashBoard from './Components/DashBoard/DashBoard'
-
+import React from "react";
+import Admindashboard from "./Components/AllRoutes/Admindashboard";
+import Allroutes from "./Components/AllRoutes/Allroutes";
+import All from "./Components/AllRoutes/Allroutes";
 
 const App = () => {
   return (
     <div>
-      <All/>
-      <DashBoard/>
+      <Allroutes />
+      <Admindashboard />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
